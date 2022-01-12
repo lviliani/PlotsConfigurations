@@ -1,0 +1,6 @@
+root -l -b -q plotRatio.C\(\"eta1\"\) 
+root -l -b -q plotRatio.C\(\"eta2\"\)
+root -l -b -q plotRatio.C\(\"eta3\"\)
+root -l -b -q plotRatio.C\(\"pt1\"\)
+root -l -b -q plotRatio.C\(\"pt2\"\)
+root -l -b -q plotRatio.C\(\"pt3\"\)

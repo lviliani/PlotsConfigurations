@@ -169,14 +169,23 @@ aliases['sr_withTrig_singleMu'] = {
 
 aliases['sr_withTrig_ElMu'] = {
     'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1))'
+#    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1))'
 }
-'''
-aliases['sr_withTrig_MuE'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1)'
+
+#aliases['sr_withTrig_MuE'] = {
+#    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1)'
+#}
+
+aliases['sr_withTrig_DoubleMu'] = {
+    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 == 1)'
 }
-'''
+
+aliases['sr_withTrig_DoubleE'] = {
+    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL == 1 )'
+}
+
 aliases['sr_withTrig'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1) || (HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_IsoMu24 == 1) || (HLT_Ele32_WPTight_Gsf == 1))'
+    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1) || (HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_IsoMu24 == 1) || (HLT_Ele32_WPTight_Gsf == 1) || (HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 == 1) || (HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL == 1 ))'
 }
 
 # B tag scale factors

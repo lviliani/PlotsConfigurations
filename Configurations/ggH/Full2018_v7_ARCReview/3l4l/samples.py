@@ -37,7 +37,7 @@ fakeReco = dataReco
 
 embedReco = 'Embedding2018_102X_nAODv7_Full2018v7'
 
-mcSteps = 'MCl1loose2018v7__MCCorr2018v7_trigEffMC__l2loose__l2tightOR2018v7{var}'
+mcSteps = 'MCl1loose2018v7__MCCorr2018v7__l2loose__l2tightOR2018v7__trigFix{var}'
 
 fakeSteps = 'DATAl1loose2018v7__l2loose__fakeW'
 
@@ -67,29 +67,21 @@ dataDirectory = os.path.join(treeBaseDir, dataReco, dataSteps)
 embedDirectory = os.path.join(treeBaseDir, embedReco, embedSteps)
 
 mcCommonWeightNoMatch = 'XSWeight*SFweight*METFilter_MC'
-mcCommonWeight = 'XSWeight*SFweight*PromptGenLepMatch2l*METFilter_MC'
+mcCommonWeight = 'XSWeight*SFweight*PromptGenLepMatch3l*METFilter_MC'
 
 
 ###########################################
 #############   SIGNALS  ##################
 ###########################################
-signals = []
 
-#### ggH -> WW
-
-samples['ggH_hww'] = {
-    'name': nanoGetSampleFiles(mcDirectory, 'GluGluHToWWTo2L2Nu_M125'),
+samples['WH_hww'] = {
+    'name':   nanoGetSampleFiles(mcDirectory, 'HWplusJ_HToWW_M125'),
     'weight': mcCommonWeight,
-    'FilesPerJob': 1,
+    'FilesPerJob': 1
 }
 
-signals.append('ggH_hww')
-
-############# VBF H->WW ############
-#samples['qqH_hww'] = {
-#    'name': nanoGetSampleFiles(mcDirectory, 'VBFHToWWTo2L2Nu_M125'),
+#samples['ZH_hww'] = {
+#    'name':   nanoGetSampleFiles(mcDirectory, 'HZJ_HToWW_M125'),
 #    'weight': mcCommonWeight,
-#    'FilesPerJob': 4
+#    'FilesPerJob': 1
 #}
-#
-#signals.append('qqH_hww')

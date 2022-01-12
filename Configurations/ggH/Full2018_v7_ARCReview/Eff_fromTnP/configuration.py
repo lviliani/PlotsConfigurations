@@ -6,7 +6,7 @@ tag = 'ggH2018_v7_TnPEff'
 # tag = 'ggH2018_v7_noFakes'
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile'
+outputDir = 'rootFile_final'
 
 # file with TTree aliases
 aliasesFile = 'aliases.py'

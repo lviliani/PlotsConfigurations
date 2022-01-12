@@ -135,8 +135,8 @@ for shift in ['jes', 'lf', 'hf', 'hfstats1', 'hfstats2', 'lfstats1', 'lfstats2',
     }
 
 ##### Trigger Efficiency
-'''
-trig_syst = ['((TriggerEffWeightMCTandP_2l_u)/(TriggerEffWeightMCTandP_2l))*(TriggerEffWeightMCTandP_2l>0.02) + (TriggerEffWeightMCTandP_2l<=0.02)', '(TriggerEffWeightMCTandP_2l_d)/(TriggerEffWeightMCTandP_2l)']
+
+trig_syst = ['((TriggerEffWeight_2l_u)/(TriggerEffWeight_2l))*(TriggerEffWeight_2l>0.02) + (TriggerEffWeight_2l<=0.02)', '(TriggerEffWeight_2l_d)/(TriggerEffWeight_2l)']
 
 nuisances['trigg'] = {
     'name': 'CMS_eff_hwwtrigger_2018',
@@ -144,7 +144,7 @@ nuisances['trigg'] = {
     'type': 'shape',
     'samples': dict((skey, trig_syst) for skey in mc_emb)
 }
-'''
+
 ##### Electron Efficiency and energy scale
 
 nuisances['eff_e'] = {
