@@ -61,7 +61,7 @@ TFile *ffix = TFile::Open("rootFile_dataTP/plots_ggH2018_v7_TnPEff.root");
   gra_DoubleMu->SetLineColor(5);
   gra_DoubleE->SetLineColor(7);
   gra_Trig->SetLineColor(4);
-  gra_TrigFix->SetLineColor(8);
+  gra_TrigFix->SetLineColor(4);
 
   gra_singlEl->SetMarkerStyle(20);
   gra_singlMu->SetMarkerStyle(20);
@@ -267,7 +267,7 @@ TFile *ffix = TFile::Open("rootFile_dataTP/plots_ggH2018_v7_TnPEff.root");
   gramm_DoubleMu->SetLineColor(5);
   gramm_DoubleE->SetLineColor(7);
   gramm_Trig->SetLineColor(4);
-  gramm_TrigFix->SetLineColor(8);
+  gramm_TrigFix->SetLineColor(4);
 
   gramm_singlEl->SetMarkerStyle(20);
   gramm_singlMu->SetMarkerStyle(20);
@@ -370,7 +370,7 @@ TFile *ffix = TFile::Open("rootFile_dataTP/plots_ggH2018_v7_TnPEff.root");
   graee_DoubleMu->SetLineColor(5);
   graee_DoubleE->SetLineColor(7);
   graee_Trig->SetLineColor(4);
-  graee_TrigFix->SetLineColor(8);
+  graee_TrigFix->SetLineColor(4);
 
   graee_singlEl->SetMarkerStyle(20);
   graee_singlMu->SetMarkerStyle(20);
