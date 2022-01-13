@@ -219,7 +219,7 @@ TFile *f2 = TFile::Open(dir2+"/plots_ggH2018_v7_TnPEff.root");
    legendme->Draw();
 
   TLine *line;
-  if (var=="eta1" or var=="eta2") line = new TLine(-3,1,3,1);
+  if (var=="eta1" or var=="eta2" or var=="eta3") line = new TLine(-2.5,1,2.5,1);
   else line = new TLine(0,1,100,1);
 
   line->SetLineWidth(2);
