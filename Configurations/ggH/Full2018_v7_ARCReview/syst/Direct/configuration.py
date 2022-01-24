@@ -2,11 +2,11 @@
 
 treeName = 'Events'
 
-tag = 'ggH2018_v7_TnPEff'
+tag = 'ggH2018_v7_trigsyst'
 # tag = 'ggH2018_v7_noFakes'
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile_drllrew_fine'
+outputDir = 'rootFile_drll_fine'
 
 # file with TTree aliases
 aliasesFile = 'aliases.py'

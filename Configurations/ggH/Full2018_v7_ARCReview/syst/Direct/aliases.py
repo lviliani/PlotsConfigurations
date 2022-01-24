@@ -6,6 +6,8 @@ configurations = os.path.realpath(inspect.getfile(inspect.currentframe())) # thi
 configurations = os.path.dirname(configurations) # Full2017_v7
 configurations = os.path.dirname(configurations) # ggH
 configurations = os.path.dirname(configurations) # Configurations
+configurations = os.path.dirname(configurations) # Configurations
+configurations = os.path.dirname(configurations) # Configurations
 
 #aliases = {}
 
@@ -155,38 +157,26 @@ aliases['wwcr'] = {
 
 # SR definition
 
+aliases['trig'] = {
+    'expr' : '((HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1) || (HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_IsoMu24 == 1) || (HLT_Ele32_WPTight_Gsf == 1) || (HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 == 1) || (HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL == 1 ))',
+}
+
 aliases['sr'] = {
     'expr': 'mth>60 && mtw2>30 && bVeto'
 }
 
-aliases['sr_withTrig_singleEl'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Ele32_WPTight_Gsf == 1)'
-}
-
-aliases['sr_withTrig_singleMu'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_IsoMu24 == 1)'
-}
-
-aliases['sr_withTrig_ElMu'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1))'
-#    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1))'
-}
-
-#aliases['sr_withTrig_MuE'] = {
-#    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1)'
-#}
-
-aliases['sr_withTrig_DoubleMu'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 == 1)'
-}
-
-aliases['sr_withTrig_DoubleE'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && (HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL == 1 )'
-}
-
 aliases['sr_withTrig'] = {
-    'expr': 'mth>60 && mtw2>30 && bVeto && ((HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL == 1) || (HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ == 1) || (HLT_IsoMu24 == 1) || (HLT_Ele32_WPTight_Gsf == 1) || (HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 == 1) || (HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL == 1 ))'
+    'expr': 'mth>60 && mtw2>30 && bVeto && trig'
 }
+
+aliases['topcr_withTrig'] = {
+    'expr': 'mtw2>30 && mll>50 && ((zeroJet && !bVeto) || bReq) && trig'
+}
+
+aliases['dycr_withTrig'] = {
+    'expr': 'mth<60 && mll>40 && mll<80 && bVeto && trig'
+}
+
 
 # B tag scale factors
 
@@ -231,5 +221,39 @@ aliases['vbfdnn'] = {
         'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
         'class': 'evaluate_multiclass',
         'args': 0,
+}
+
+aliases['topdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 1,
+}
+
+aliases['wwdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 2,
+}
+
+aliases['gghdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 3,
+}
+
+aliases['vbflike'] = {
+        'expr': 'vbfdnn>gghdnn && vbfdnn>topdnn && vbfdnn>wwdnn',
+}
+
+aliases['toplike'] = {
+        'expr': 'topdnn>gghdnn && topdnn>vbfdnn && topdnn>wwdnn',
+}
+
+aliases['wwlike'] = {
+        'expr': 'wwdnn>gghdnn && wwdnn>topdnn && wwdnn>vbfdnn',
+}
+
+aliases['gghlike'] = {
+        'expr': 'gghdnn>vbfdnn && gghdnn>topdnn && gghdnn>wwdnn',
 }
 

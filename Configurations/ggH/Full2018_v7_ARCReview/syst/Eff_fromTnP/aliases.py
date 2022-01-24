@@ -4,8 +4,9 @@ import inspect
 
 configurations = os.path.realpath(inspect.getfile(inspect.currentframe())) # this file
 configurations = os.path.dirname(configurations) # Full2017_v7
-configurations = os.path.dirname(configurations) # Full2017_v7
 configurations = os.path.dirname(configurations) # ggH
+configurations = os.path.dirname(configurations) # Configurations
+configurations = os.path.dirname(configurations) # Configurations
 configurations = os.path.dirname(configurations) # Configurations
 
 #aliases = {}
@@ -94,15 +95,10 @@ aliases['Jet_PUIDSF'] = {
 }
 
 
-#aliases['drll_rew'] = {
-#     'expr' : ' ( ((drll >= 0.0 && drll <0.5)*0.874293 + (drll >= 0.5 && drll <1.0)*0.996569 + (drll >= 1.0 && drll <1.5)*0.996051 + (drll >= 1.5 && drll <2.0)*0.997844 + (drll >= 2.0 && drll <2.5)*0.998130 + (drll >= 2.5 && drll <3.0)*0.998615 + (drll >= 3.0 && drll <3.5)*0.997920 + (drll >= 3.5 && drll <4.0)*0.997854 + (drll >= 4.0 && drll <4.5)*1.001182 + (drll >= 4.5 )*0.994173)*(abs(Lepton_pdgId[0])==11 && abs(Lepton_pdgId[1])==11) + ((drll >= 0.0 && drll <0.5)*0.996028 + (drll >= 0.5 && drll <1.0)*1.003401 + (drll >= 1.0 && drll <1.5)*1.002837 + (drll >= 1.5 && drll <2.0)*1.004616 + (drll >= 2.0 && drll <2.5)*1.004096 + (drll >= 2.5 && drll <3.0)*1.004561 + (drll >= 3.0 && drll <3.5)*1.004589 + (drll >= 3.5 && drll <4.0)*1.005748 + (drll >= 4.0 && drll <4.5)*1.006065 + (drll >= 4.5 )*0.992700)*(abs(Lepton_pdgId[0])==11 && abs(Lepton_pdgId[1])==13) + ((drll >= 0.0 && drll <0.5)*0.997516 + (drll >= 0.5 && drll <1.0)*0.999297 + (drll >= 1.0 && drll <1.5)*0.999881 + (drll >= 1.5 && drll <2.0)*0.998123 + (drll >= 2.0 && drll <2.5)*0.999193 + (drll >= 2.5 && drll <3.0)*0.997161 + (drll >= 3.0 && drll <3.5)*0.998346 + (drll >= 3.5 && drll <4.0)*0.995930 + (drll >= 4.0 && drll <4.5)*0.998973 + (drll >= 4.5 )*0.977712)*(abs(Lepton_pdgId[0])==13 && abs(Lepton_pdgId[1])==11) + ((drll >= 0.0 && drll <0.5)*0.993133 + (drll >= 0.5 && drll <1.0)*0.998352 + (drll >= 1.0 && drll <1.5)*1.001700 + (drll >= 1.5 && drll <2.0)*1.001031 + (drll >= 2.0 && drll <2.5)*0.999796 + (drll >= 2.5 && drll <3.0)*0.999189 + (drll >= 3.0 && drll <3.5)*1.000540 + (drll >= 3.5 && drll <4.0)*1.000136 + (drll >= 4.0 && drll <4.5)*1.003553 + (drll >= 4.5)*0.992509)*(abs(Lepton_pdgId[0])==13 && abs(Lepton_pdgId[1])==13))'
-#}
-
 aliases['drll_rew'] = {
      'expr' : '( ((drll >= 0.00 && drll <0.25)*0.019013 + (drll >= 0.25 && drll <0.50)*0.903772 + (drll >= 0.50 && drll <1.00)*0.996569 + (drll >= 1.00 && drll <1.50)*0.996051 + (drll >= 1.50 && drll <2.00)*0.997844 + (drll >= 2.00 && drll <2.50)*0.998130 + (drll >= 2.50 && drll <3.00)*0.998615 + (drll >= 3.00 && drll <3.50)*0.997920 + (drll >= 3.50 && drll <4.00)*0.997854 + (drll >= 4.00 && drll <4.50)*1.001182 + (drll >= 4.50)*0.994173)*(abs(Lepton_pdgId[0])==11 && abs(Lepton_pdgId[1])==11) + ((drll >= 0.00 && drll <0.25)*0.770696 + (drll >= 0.25 && drll <0.50)*1.003577 + (drll >= 0.50 && drll <1.00)*1.003401 + (drll >= 1.00 && drll <1.50)*1.002837 + (drll >= 1.50 && drll <2.00)*1.004616 + (drll >= 2.00 && drll <2.50)*1.004096 + (drll >= 2.50 && drll <3.00)*1.004561 + (drll >= 3.00 && drll <3.50)*1.004589 + (drll >= 3.50 && drll <4.00)*1.005748 + (drll >= 4.00 && drll <4.50)*1.006065 + (drll >= 4.50)*0.992700)*(abs(Lepton_pdgId[0])==11 && abs(Lepton_pdgId[1])==13) + ((drll >= 0.00 && drll <0.25)*0.857813 + (drll >= 0.25 && drll <0.50)*1.002417 + (drll >= 0.50 && drll <1.00)*0.999297 + (drll >= 1.00 && drll <1.50)*0.999881 + (drll >= 1.50 && drll <2.00)*0.998123 + (drll >= 2.00 && drll <2.50)*0.999193 + (drll >= 2.50 && drll <3.00)*0.997161 + (drll >= 3.00 && drll <3.50)*0.998346 + (drll >= 3.50 && drll <4.00)*0.995930 + (drll >= 4.00 && drll <4.50)*0.998973 + (drll >= 4.50)*0.977712)*(abs(Lepton_pdgId[0])==13 && abs(Lepton_pdgId[1])==11) + ((drll >= 0.00 && drll <0.25)*0.980155 + (drll >= 0.25 && drll <0.50)*0.993574 + (drll >= 0.50 && drll <1.00)*0.998352 + (drll >= 1.00 && drll <1.50)*1.001700 + (drll >= 1.50 && drll <2.00)*1.001031 + (drll >= 2.00 && drll <2.50)*0.999796 + (drll >= 2.50 && drll <3.00)*0.999189 + (drll >= 3.00 && drll <3.50)*1.000540 + (drll >= 3.50 && drll <4.00)*1.000136 + (drll >= 4.00 && drll <4.50)*1.003553 + (drll >= 4.50)*0.992509)*(abs(Lepton_pdgId[0])==13 && abs(Lepton_pdgId[1])==13) )',
     'samples' : mc
 }
-
 
 # data/MC scale factors
 aliases['SFweight'] = {
@@ -116,3 +112,38 @@ aliases['vbfdnn'] = {
         'class': 'evaluate_multiclass',
         'args': 0,
 }
+
+aliases['topdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 1,
+}
+
+aliases['wwdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 2,
+}
+
+aliases['gghdnn'] = {
+        'linesToAdd': ['.L %s/VBF/Keras_2018_v7/dnn_quad/evaluate_multiclass_quad.cc+' % configurations],
+        'class': 'evaluate_multiclass',
+        'args': 3,
+}
+
+aliases['vbflike'] = {
+        'expr': 'vbfdnn>gghdnn && vbfdnn>topdnn && vbfdnn>wwdnn',
+}
+
+aliases['toplike'] = {
+        'expr': 'topdnn>gghdnn && topdnn>vbfdnn && topdnn>wwdnn',
+}
+
+aliases['wwlike'] = {
+        'expr': 'wwdnn>gghdnn && wwdnn>topdnn && wwdnn>vbfdnn',
+}
+
+aliases['gghlike'] = {
+        'expr': 'gghdnn>vbfdnn && gghdnn>topdnn && gghdnn>wwdnn',
+}
+
